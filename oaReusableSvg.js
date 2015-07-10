@@ -1,5 +1,5 @@
-angular.module('omri-aharon.ng-reusable-svg', []).
-    directive('oaCreateSvg', [function () {
+angular.module('ngReusableSvg', []).
+    directive('oaReusableSvg', [function () {
 
         return {
             restrict: 'A',
@@ -11,7 +11,6 @@ angular.module('omri-aharon.ng-reusable-svg', []).
                 return {
                     pre: function preLink(scope, iElement, iAttrs) {
                         iElement.bind('load', function() {
-
                             // Basic element
                             var div = angular.element('<div style="float:left; height:' + iAttrs.height + 'px; width:' + iAttrs.width + 'px;"></div>');
 

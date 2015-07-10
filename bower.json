@@ -1,0 +1,24 @@
+{
+  "name": "ngReusableSvg",
+  "version": "0.0.0",
+  "authors": [
+    "omri.aharon@gmail.com"
+  ],
+  "description": "Creates a reusable SVG component out of an external SVG file.",
+  "main": "directive.js",
+  "keywords": [
+    "SVG",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15"
+  }
+}
