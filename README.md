@@ -25,7 +25,7 @@ Download from [here](http://omriaharon.github.io/ngReusableSvg/)
 
 3. Add `oa-reusable-svg` onto an `<object>` tag:
 
-        <object oa-create-svg
+        <object oa-reusable-svg
                 id="my-svg"
                 data="my_icon.svg"
                 type="image/svg+xml"
