@@ -5,7 +5,7 @@
     "omri.aharon@gmail.com"
   ],
   "description": "Creates a reusable SVG component out of an external SVG file.",
-  "main": "directive.js",
+  "main": "oaReusableSvg.js",
   "keywords": [
     "SVG",
     "angularjs"
