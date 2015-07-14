@@ -1,7 +1,5 @@
-'use strict';
-
-var CreateSvgDirective = [function () {
-
+angular.module('ngReusableSvg', []).
+    directive('oaReusableSvg', [function () {
     return {
         restrict: 'A',
         scope: {
@@ -56,4 +54,4 @@ var CreateSvgDirective = [function () {
         }
     };
 
-}];
+}]);
