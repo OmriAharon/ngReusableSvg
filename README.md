@@ -1,3 +1,5 @@
+I'd like to extend credit to Matan Zohar for the replacement trick. For further info, see [my blog](http://omriaharon.blogspot.co.il/).
+
 ## ngReusableSvg - Reuse SVG Files with CSS Modifications
 Creates a reusable SVG component out of an external SVG file. This lets you control your SVGs using CSS.
 
