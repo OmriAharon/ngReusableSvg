@@ -19,7 +19,7 @@ var CreateSvgDirective = [function () {
 
                         // Transfering attributes
                         for (var attr in iAttrs) {
-                            if (attr.indexOf('$') === -1 && attr !== 'type' && attr !== 'mkpCreateSvg' && attr !== 'data') {
+                            if (attr.indexOf('$') === -1 && attr !== 'type' && attr !== 'oaReusableSvg' && attr !== 'data') {
                                 if (attr === 'toggle') {
                                     div.attr('data-toggle', iAttrs[attr]);
                                 }
