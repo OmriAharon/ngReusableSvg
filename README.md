@@ -36,6 +36,8 @@ Download from [here](http://omriaharon.github.io/ngReusableSvg/)
                 width="30">
         </object>
 
+4. **Important!** Make sure your SVG file itself does not specify its own height & width, otherwise this will not work properly. 
+
 ### ngReusableSvg Attributes
 
 * **svgClick** - an action to be performed when the SVG image is clicked.
