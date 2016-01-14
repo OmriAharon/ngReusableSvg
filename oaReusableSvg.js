@@ -11,6 +11,19 @@ angular.module('ngReusableSvg', []).
             compile: function compile() {
                 return {
                     pre: function preLink(scope, iElement, iAttrs) {
+                        if (iAttrs.notifyReady) {
+                            scope.$watch(function () {
+                                return $parse(iAttrs.notifyReady)(scope);
+                            }, function (newVal) {
+                                if (!newVal) {
+                                    iElement.css('visibility', 'hidden');
+                                }
+                                else {
+                                    iElement.css('visibility', 'visible');
+                                }
+                            });
+                        }
+
                         iElement.bind('load', function() {
 
                             $timeout(function () {
