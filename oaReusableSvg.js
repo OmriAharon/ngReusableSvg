@@ -1,30 +1,31 @@
 angular.module('ngReusableSvg', []).
-    directive('oaReusableSvg', ['$timeout', '$compile', '$parse', function ($timeout, $compile, $parse) {
+    directive('oaReusableSvg', ['$timeout', '$compile', function ($timeout, $compile) {
+        var svgReady = false;
+
         return {
             restrict: 'A',
             scope: {
                 eventHandler: '&ngClick',
-                notifyReady: '=', /*** Created this since I duplicate the SVG later on, and we need to know when it's ready ***/
+                notifyReady: '=',
+                /*** Created this since I duplicate the SVG later on, and we need to know when it's ready ***/
                 float: '=',
                 classEventHandler: '&ngClass'
             },
             compile: function compile() {
                 return {
                     pre: function preLink(scope, iElement, iAttrs) {
-                        if (iAttrs.notifyReady) {
-                            scope.$watch(function () {
-                                return $parse(iAttrs.notifyReady)(scope);
-                            }, function (newVal) {
-                                if (!newVal) {
-                                    iElement.css('visibility', 'hidden');
-                                }
-                                else {
-                                    iElement.css('visibility', 'visible');
-                                }
-                            });
-                        }
+                        scope.$watch(function () {
+                            return svgReady;
+                        }, function (newVal) {
+                            if (!newVal) {
+                                iElement.css('visibility', 'hidden');
+                            }
+                            else {
+                                iElement.css('visibility', 'visible');
+                            }
+                        });
 
-                        iElement.bind('load', function() {
+                        iElement.bind('load', function () {
 
                             $timeout(function () {
 
@@ -56,6 +57,7 @@ angular.module('ngReusableSvg', []).
 
 
                                 // Ready notification
+                                svgReady = true;
                                 if (scope.notifyReady !== undefined) {
                                     scope.notifyReady = true;
                                 }
