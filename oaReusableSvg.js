@@ -1,5 +1,5 @@
 angular.module('ngReusableSvg', []).
-    directive('oaReusableSvg', ['$timeout', '$compile', function ($timeout, $compile) {
+    directive('oaReusableSvg', ['$timeout', '$compile', '$parse', function ($timeout, $compile, $parse) {
         return {
             restrict: 'A',
             scope: {
