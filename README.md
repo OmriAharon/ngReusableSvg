@@ -40,7 +40,9 @@ Download from [here](http://omriaharon.github.io/ngReusableSvg/)
 
 ### ngReusableSvg Attributes
 
-* **svgClick** - an action to be performed when the SVG image is clicked.
+* **ngClick** - an action to be performed when the SVG image is clicked.
+
+* **ngClass** - an action to be performed to determine the class.
 
 * **notifyReady** - a boolean (needs to be initialized as false) that will be set to true when the switch has been performed. Useful if you need to know when the image is ready, for instance, when cloning the element.
 
