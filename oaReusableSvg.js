@@ -1,6 +1,5 @@
 angular.module('ngReusableSvg', []).
     directive('oaReusableSvg', ['$timeout', '$compile', function ($timeout, $compile) {
-        var svgReady = false;
 
         return {
             restrict: 'A',
@@ -14,6 +13,8 @@ angular.module('ngReusableSvg', []).
             compile: function compile() {
                 return {
                     pre: function preLink(scope, iElement, iAttrs) {
+                        var svgReady = false;
+
                         scope.$watch(function () {
                             return svgReady;
                         }, function (newVal) {
