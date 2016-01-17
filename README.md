@@ -6,6 +6,7 @@ Creates a reusable SVG component out of an external SVG file. This lets you cont
 ## Dependencies
 
 * AngularJS v1.3
+* Previous versions might work too, but haven't been tested.
 
 ## How to get it?
 
