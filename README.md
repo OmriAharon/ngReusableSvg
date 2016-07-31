@@ -3,6 +3,8 @@ I'd like to extend credit to Matan Zohar for the replacement trick. For further 
 ## ngReusableSvg - Reuse SVG Files with CSS Modifications
 Creates a reusable SVG component out of an external SVG file. This lets you control your SVGs using CSS.
 
+More specifically, you will be able to change the fill color of the SVG, meaning you can change its color via CSS.
+
 ## Dependencies
 
 * AngularJS v1.3
