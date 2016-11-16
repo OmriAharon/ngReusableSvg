@@ -16,6 +16,10 @@ More specifically, you will be able to change the fill color of the SVG, meaning
 
 Download from [here](http://omriaharon.github.io/ngReusableSvg/)
 
+### NPM
+
+    npm install --save ng-reusable-svg
+
 ### Bower
 
     bower install ngReusableSvg
